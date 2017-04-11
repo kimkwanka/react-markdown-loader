@@ -5,7 +5,9 @@ const
   Prism = require('node-prismjs'),
   Remarkable = require('remarkable'),
   escapeHtml = require('remarkable/lib/common/utils').escapeHtml,
-  md = new Remarkable();
+  md = new Remarkable({
+    linkTarget: '_blank'
+  });
 
 /**
  * Wraps the code and jsx in an html component
